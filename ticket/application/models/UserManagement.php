@@ -78,6 +78,11 @@ class UserManagement extends CI_Model{
     public function delete_user($id){
         return $this->db->delete('usermanagement', array('id' => $id));
     }
+
+    public function getOperators(){
+        $query = $this->db->query('SELECT full_user_name from usermanagement');
+        return $this->db->query($query)->result();
+    }
 }
 
 ?>

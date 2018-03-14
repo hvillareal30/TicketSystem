@@ -24,19 +24,13 @@
     <div class="row">
         <div class="col-xs-5 col-sm-5 col-md-5"></div>
         <div class="col-xs-5 col-sm-5 col-md-5">
-            <div class="form-group">
+            <select class="form-control">
                 <strong> Set Operator </strong>
-                <?php
-
-                $option = array(
-                    'operator1' => 'Operator1',
-                    'operator2' => 'Operator2',
-                    'operator3' => 'Operator3'
-                );
-
-                echo form_dropdown('operator', $option);
-                ?>
-            </div>
+                <?php foreach($groups as $each){ ?>
+                    <option value="<?php echo $each->full_user_name; ?>"><?php echo $each->full_user_name; ?></option>;
+                }
+            <?php } ?>
+            </select>
         </div>
     </div>
 <br>

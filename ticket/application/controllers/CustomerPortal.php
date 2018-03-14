@@ -242,8 +242,9 @@ class CustomerPortal extends CI_Controller {
     public function adminticketedit($ticket_id){
         $adminticket = $this->CustomerPortal->find_ticket($ticket_id);
 
+        $data['groups'] = $this->usermanagement->getOperators();
         $this->load->view('Admin/adminheader');
-        $this->load->view('Admin/adminticketedit', array('adminticket' => $adminticket));
+        $this->load->view('Admin/adminticketedit', array('adminticket' => $adminticket), $data);
         $this->load->view('theme/footer');
     }
 
@@ -265,6 +266,13 @@ class CustomerPortal extends CI_Controller {
         redirect(base_url('CustomerPortal/adminticketindex'));
     }
 
+    public function adminreports(){
+
+    
+        $this->load->view('Admin/adminheader');
+        $this->load->view('Admin/adminreports');
+        $this->load->view('theme/footer');
+    }
 
 
 
