@@ -15,6 +15,11 @@
         <div class="navbar-header">
             <a class="navbar-brand" href="<?php echo base_url('CustomerPortal')?>">SoViLe Ticket Support System</a>
         </div>
+        <ul class="nav navbar">
+            <li><a href="<?php echo base_url('CustomerPortal/usermanagementindex');?>">User Management</a></li>
+            <li><a href="<?php echo base_url('CustomerPortal/adminticketindex');?>">Ticket Management</a></li>
+            <li><a href="<?php echo base_url('CustomerPortal/adminreports');?>">Reports</a></li>
+        </ul>
     <ul class="nav navbar-nav navbar navbar-right">
         
         <li><a href="<?php echo base_url('CustomerPortal/adminlogout')?>"><span class="glyphicon glyphicon-login"></span>Logout</a></li>
